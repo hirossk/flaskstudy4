@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto mt-10">
+        <h1 class="text-3xl font-bold mb-5">User List</h1>
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <table class="min-w-full bg-white">
+                <thead class="bg-gray-800 text-white">
+                    <tr>
+                        <th class="w-1/2 py-3 px-4 uppercase font-semibold text-sm">Name</th>
+                        <th class="w-1/2 py-3 px-4 uppercase font-semibold text-sm">Email</th>
+                    </tr>
+                </thead>
+                <tbody class="text-gray-700">
+                    {% for user in users %}
+                    <tr>
+                        <td class="w-1/2 py-3 px-4">{{ user.name }}</td>
+                        <td class="w-1/2 py-3 px-4">{{ user.email }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
